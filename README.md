@@ -20,7 +20,7 @@ Sistema de Recarga do RU
 
 - https://www.nvaccess.org/download/  
 
-> **Observação:** Foram apresentados cinco modelos distintos de interface, todos implementando boas práticas de acessibilidade (WCAG 2.1 nível AA), WAI-ARIA e padrões do Governo Brasileiro.
+> **Observação:** São apresentados dois modelos de interface, todos implementando boas práticas de acessibilidade (WCAG 2.1 nível AA), WAI-ARIA e padrões do Governo Brasileiro.
 
 ---
 
