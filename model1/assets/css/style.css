@@ -1,0 +1,140 @@
+/* model1/assets/css/style.css */
+
+/* =========================
+   1. Reset e estilização básica
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%; 
+    line-height: 1.5;
+}
+body {
+    background-color: #FFFFFF; 
+    color: #000000;           
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   2. Skip link (WCAG 2.1 e-MAG)
+   ========================= */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 1rem;
+    background: #000000;
+    color: #FFFFFF;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 1rem;
+    outline: 3px dashed #FBBF24; /* (contraste WCAG) */
+}
+
+/* =========================
+   3. Header, main e footer (landmarks)
+   ========================= */
+.header {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    text-align: center;
+}
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   4. Container de login
+   ========================= */
+.login-container {
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilização do “page-title” (Recarga RU) */
+.page-title {
+    font-size: 2rem; /* 32px – bem visível */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+/* =========================
+   5. Botão “Entrar” – Alto Contraste e foco
+   ========================= */
+.btn-login {
+    display: inline-block;
+    background-color: #000000;  
+    color: #FFFFFF;             
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;         /* 20px */
+    border-radius: 0.25rem;     /* 4px */
+    border: 2px solid #000000;  /* Mesma cor de fundo */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn-login:hover,
+.btn-login:focus {
+    background-color: #FFFFFF;  /* Inverte cores para indicar foco/hover */
+    color: #000000;
+    border-color: #000000;
+}
+.btn-login:focus {
+    outline: 3px dashed #F59E0B; /* Laranja-500 para destaque de foco */
+}
+
+/* =========================
+   6. Footer
+   ========================= */
+.footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem; /* 14px */
+}
+.footer span {
+    color: #F59E0B; /* Laranja para realce */
+}
+
+/* =========================
+   7. Helper: “visually-hidden” para leitores de tela
+   ========================= */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* =========================
+   8. Responsividade básica
+   ========================= */
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 1.75rem; /* 28px em telas menores */
+    }
+    .btn-login {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem; /* 16px */
+    }
+    .footer {
+        font-size: 0.75rem; /* 12px */
+    }
+}
